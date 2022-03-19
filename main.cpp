@@ -20,28 +20,36 @@ int main() {
 
    string line;
 
-   getline(testInput, line);
+   // getline(testInput, line);
+
+   string currentCompany = "";
+
+   Soldier soldierArray[4];
+   int arrayCounter = 0;
 
    while (!testInput.eof())
    {
-      // 1) pick current company 2) input soldier paragraph 3) blankspace, skip
-      if (line == "")
-      {
-         cout << "blank" << endl;
-      }
-      else if (line.find("COMPANY") != string::npos)
-      {
-         cout << "company" << endl;
-      } else
-      {
-         
-      }
       getline(testInput, line);
+      
+      // 1) pick current company 2) input soldier paragraph 3) blankspace, skip
+      if (line.find("COMPANY \"") != string::npos)
+      {
+         currentCompany = line[9];
+         cout << "COMPANY SET" << endl;
+      } else if (line != "")
+      {
+         cout << "SOLDIER SET" << arrayCounter << endl;
+         soldierArray[arrayCounter].set_paragraph(line);
+         soldierArray[arrayCounter].set_company(currentCompany);
+         arrayCounter++;
+      }
    }
 
-   Soldier firstSoldier;
-   firstSoldier.set_paragraph(line);
-   cout << firstSoldier.get_paragraph() << endl;
+   for (int i = 0; i < 4; i++)
+   {
+      cout << i << " ";
+      soldierArray[i].printSoldierInfo();
+   }
 
    return 0;
 }
