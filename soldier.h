@@ -8,6 +8,7 @@ using namespace std;
 class Soldier
 {
 public:
+   Soldier(string company, string line);
 
    const void printSoldierInfo();
 

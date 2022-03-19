@@ -4,6 +4,12 @@
 
 using namespace std;
 
+Soldier::Soldier(string companyInput, string line)
+{
+   paragraph = line;
+   company = companyInput;
+}
+
 const void Soldier::printSoldierInfo()
 {
    cout << paragraph << endl;

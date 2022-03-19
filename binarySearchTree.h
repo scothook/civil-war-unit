@@ -10,7 +10,8 @@ using namespace std;
 
 struct Node
 {
-   Soldier soldier;
+   Node();
+   Soldier* soldier;
    Node* left;
    Node* right;
 };
@@ -18,9 +19,11 @@ struct Node
 class BST
 {
 public:
+   BST();
    void createUnit(string fileName);
    void printRoster();
-   void addSoldier(string line);
+   void printHelper(Node* currentNode);
+   void addSoldier(Node* currentNode, string company, string line);
    // new node (new soldier)
    // sort many different ways
 private:
