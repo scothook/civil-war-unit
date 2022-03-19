@@ -10,7 +10,7 @@ class Soldier
 public:
    Soldier(string company, string line);
 
-   const void printSoldierInfo();
+   const void printSoldierInfo(int printType);
 
    void set_paragraph(string input);
    void set_company(string input);
@@ -21,6 +21,11 @@ public:
 private:
    string paragraph; // soldier's unedited roster paragraph
    string company;
+   string firstName;
+   string lastName;
+   int age;
+
+   int findAge(string line);
 };
 
 

@@ -19,8 +19,10 @@ using namespace std;
 
 int main() {
    BST regimentTree;
-   regimentTree.createUnit("testRoster.txt");
-   regimentTree.printRoster();
+   //regimentTree.createUnit("testRoster.txt");
+   regimentTree.createUnit("rawRoster.txt");
+   //regimentTree.printRoster();
+   regimentTree.printAges();
 
    return 0;
 }

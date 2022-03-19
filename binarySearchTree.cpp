@@ -73,15 +73,20 @@ void BST::addSoldier(Node* currentNode, string company, string line)
 
 void BST::printRoster()
 {
-   printHelper(root);
+   printHelper(root, 0);
 }
 
-void BST::printHelper(Node* currentNode)
+void BST::printAges()
+{
+   printHelper(root, 1);
+}
+
+void BST::printHelper(Node* currentNode, int printType)
 {
    if (currentNode)
    {
-      printHelper(currentNode->left);
-      currentNode->soldier->printSoldierInfo();
-      printHelper(currentNode->right);
+      printHelper(currentNode->left, printType);
+      currentNode->soldier->printSoldierInfo(printType);
+      printHelper(currentNode->right, printType);
    }
 }

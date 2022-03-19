@@ -21,11 +21,14 @@ class BST
 public:
    BST();
    void createUnit(string fileName);
-   void printRoster();
-   void printHelper(Node* currentNode);
    void addSoldier(Node* currentNode, string company, string line);
-   // new node (new soldier)
-   // sort many different ways
+
+   void printHelper(Node* currentNode, int printType);
+
+   void printRoster();
+   void printAges();
+
+
 private:
    Node* root;
 };

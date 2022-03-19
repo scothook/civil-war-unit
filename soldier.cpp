@@ -8,12 +8,32 @@ Soldier::Soldier(string companyInput, string line)
 {
    paragraph = line;
    company = companyInput;
+   age = findAge(line);
 }
 
-const void Soldier::printSoldierInfo()
+int Soldier::findAge(string line)
 {
-   cout << paragraph << endl;
-   cout << company << endl << endl;
+   int startChar = line.find("Age") + 4;
+   string ageString = line.substr(startChar, 2);
+   return atoi(ageString.c_str());
+}
+
+
+
+const void Soldier::printSoldierInfo(int printType)
+{
+   switch (printType)
+   {
+      case 0:
+         cout << paragraph << endl;
+         cout << company << endl;
+         cout << age << endl;
+         cout << endl;
+      case 1:
+         cout << age << endl;
+
+   }
+
 }
 
 void Soldier::set_paragraph(string input)
