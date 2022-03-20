@@ -26,6 +26,8 @@ private:
    int age;
 
    int findAge(string line);
+   string findFirstName(string line);
+   string findLastName(string line);
 };
 
 

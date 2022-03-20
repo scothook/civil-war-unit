@@ -22,7 +22,8 @@ int main() {
    //regimentTree.createUnit("testRoster.txt");
    regimentTree.createUnit("rawRoster.txt");
    //regimentTree.printRoster();
-   regimentTree.printAges();
+   //regimentTree.printAges();
+   regimentTree.printNames();
 
    return 0;
 }

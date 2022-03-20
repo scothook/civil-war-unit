@@ -81,6 +81,11 @@ void BST::printAges()
    printHelper(root, 1);
 }
 
+void BST::printNames()
+{
+   printHelper(root, 2);
+}
+
 void BST::printHelper(Node* currentNode, int printType)
 {
    if (currentNode)
