@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "date.h"
 #include "soldier.h"
 #include "binarySearchTree.h"
 
@@ -23,7 +24,7 @@ int main() {
    //regimentTree.printLastNames();
    //cout << regimentTree.get_soldierCount();
    //regimentTree.printResidences();
-   regimentTree.printNativities();
+   //regimentTree.printNativities();
 
    return 0;
 }

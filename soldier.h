@@ -2,15 +2,9 @@
 #define SOLDIER_H_
 
 #include <string>
+#include "date.h"
 
 using namespace std;
-
-struct Date
-{
-   int day;
-   int month;
-   int year;
-};
 
 class Soldier
 {
