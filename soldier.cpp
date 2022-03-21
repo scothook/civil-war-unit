@@ -11,6 +11,8 @@ Soldier::Soldier(string companyInput, string line)
    age = findAge(line);
    firstName = findFirstName(line);
    lastName = findLastName(line);
+   residence = findResidence(line);
+   nativity = findNativity(line);
 }
 
 int Soldier::findAge(string line)
@@ -36,6 +38,28 @@ string Soldier::findLastName(string line)
    return line.substr(0, endChar);
 }
 
+string Soldier::findResidence(string line)
+{
+   if (line.find("Residence") != string::npos)
+   {
+      int startChar = line.find("Residence") + 10;
+      int endChar = line.find(",", startChar);
+      return line.substr(startChar, endChar - startChar);
+   }
+   else return "No residence listed";
+}
+
+string Soldier::findNativity(string line)
+{
+   if (line.find("nativity") != string::npos)
+   {
+      int startChar = line.find("nativity") + 9;
+      int endChar = line.find(".", startChar);
+      return line.substr(startChar, endChar - startChar);
+   }
+   else return "No nativity listed";
+}
+
 const void Soldier::printSoldierInfo(int printType)
 {
    switch (printType)
@@ -50,7 +74,16 @@ const void Soldier::printSoldierInfo(int printType)
          cout << age << endl;
          break;
       case 2:
-         cout << firstName << " " << lastName << endl;
+         cout << firstName << endl;
+         break;
+      case 3:
+         cout << lastName << endl;
+         break;
+      case 4:
+         cout << residence << endl;
+         break;
+      case 5:
+         cout << nativity << endl;
          break;
 
    }

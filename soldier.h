@@ -5,6 +5,13 @@
 
 using namespace std;
 
+struct Date
+{
+   int day;
+   int month;
+   int year;
+};
+
 class Soldier
 {
 public:
@@ -15,6 +22,7 @@ public:
    void set_paragraph(string input);
    void set_company(string input);
 
+
    const string get_paragraph();
    const string get_company();
    
@@ -24,10 +32,14 @@ private:
    string firstName;
    string lastName;
    int age;
+   string residence;
+   string nativity;
 
    int findAge(string line);
    string findFirstName(string line);
    string findLastName(string line);
+   string findResidence(string line);
+   string findNativity(string line);
 };
 
 

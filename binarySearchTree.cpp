@@ -9,6 +9,7 @@ Node::Node()
 
 BST::BST()
 {
+   soldierCount = 0;
    root = NULL;
 }
 
@@ -29,6 +30,7 @@ void BST::createUnit(string fileName)
       } 
       else if (line != "")
       {
+         soldierCount++;
          addSoldier(root, currentCompany, line);
       }
    }
@@ -71,6 +73,11 @@ void BST::addSoldier(Node* currentNode, string company, string line)
    }
 }
 
+int BST::get_soldierCount()
+{
+   return soldierCount;
+}
+
 void BST::printRoster()
 {
    printHelper(root, 0);
@@ -81,9 +88,26 @@ void BST::printAges()
    printHelper(root, 1);
 }
 
-void BST::printNames()
+void BST::printFirstNames()
 {
    printHelper(root, 2);
+}
+
+void BST::printLastNames()
+{
+   printHelper(root, 3);
+}
+
+//print first and last
+
+void BST::printResidences()
+{
+   printHelper(root, 4);
+}
+
+void BST::printNativities()
+{
+   printHelper(root, 5);
 }
 
 void BST::printHelper(Node* currentNode, int printType)

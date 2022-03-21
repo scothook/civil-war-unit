@@ -23,13 +23,19 @@ public:
    void createUnit(string fileName);
    void addSoldier(Node* currentNode, string company, string line);
 
+   int get_soldierCount();
+
    void printHelper(Node* currentNode, int printType);
 
    void printRoster();
    void printAges();
-   void printNames();
+   void printFirstNames();
+   void printLastNames();
+   void printResidences();
+   void printNativities();
 
 private:
+   int soldierCount;
    Node* root;
 };
 

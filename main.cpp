@@ -1,9 +1,5 @@
 // ************TO DO******************
-// soldier constructor
-// dynamic storage for soldiers
-// handle input of any possible line
-// create and give soldiers paragraphs
-// parse through paragraphs
+// total parse through paragraphs
 // ***handle typos
 // generate cool statistics
 
@@ -23,7 +19,11 @@ int main() {
    regimentTree.createUnit("rawRoster.txt");
    //regimentTree.printRoster();
    //regimentTree.printAges();
-   regimentTree.printNames();
+   //regimentTree.printFirstNames();
+   //regimentTree.printLastNames();
+   //cout << regimentTree.get_soldierCount();
+   //regimentTree.printResidences();
+   regimentTree.printNativities();
 
    return 0;
 }
